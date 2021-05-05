@@ -183,7 +183,7 @@ where
     fn type_info() -> Type {
         Type::builder()
             .path(Path::prelude("BTreeMap"))
-            .type_params(tuple_meta_type![(K, V)])
+            .type_params(tuple_meta_type![K, V])
             .composite(Fields::unnamed().field_of::<[(K, V)]>("[(K, V)]", &[]))
     }
 }
